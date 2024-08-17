@@ -45,7 +45,7 @@ export const MobileNavbar = () => {
             {links.map((link) => (
               <li
                 key={link.replace(" ", "-")}
-                className="hover:text-[#3E8959] hover:brightness-90 transition-all"
+                className="hover:text-[#CCC] hover:brightness-90 transition-all"
                 onClick={() => setIsClicked(false)}
               >
                 <button className="text-[25px] mb-8">{link}</button>

@@ -4,28 +4,28 @@ export const colors = [
     color: "#960001",
     bg_nike: new URL('./src/assets/red/NIKE RED BG.webp', import.meta.url).href,
     bg: new URL('./src/assets/red/RED BG.webp', import.meta.url).href,
-    shoe: new URL('./src/assets/red/RED.avif', import.meta.url).href,
+    shoe: new URL('./src/assets/red/RED.webp', import.meta.url).href,
   },
   {
     color_text: "BLUE",
     color: "#013DDB",
     bg_nike: new URL('./src/assets/blue/NIKE BLUE BG.webp', import.meta.url).href,
     bg: new URL('./src/assets/blue/BLUE BG.webp', import.meta.url).href,
-    shoe: new URL('./src/assets/blue/BLUE.avif', import.meta.url).href,
+    shoe: new URL('./src/assets/blue/BLUE.webp', import.meta.url).href,
   },
   {
     color_text: "GREEN",
     color: "#437A52",
     bg_nike: new URL('./src/assets/green/NIKE GREEN BG.webp', import.meta.url).href,
     bg: new URL('./src/assets/green/GREEN BG.webp', import.meta.url).href,
-    shoe: new URL('./src/assets/green/GREEN.avif', import.meta.url).href,
+    shoe: new URL('./src/assets/green/GREEN.webp', import.meta.url).href,
   },
   {
     color_text: "BROWN",
     color: "#9E5E32",
     bg_nike: new URL('./src/assets/brown/NIKE BROWN BG.webp', import.meta.url).href,
     bg: new URL('./src/assets/brown/BROWN BG.webp', import.meta.url).href,
-    shoe: new URL('./src/assets/brown/BROWN.avif', import.meta.url).href,
+    shoe: new URL('./src/assets/brown/BROWN.webp', import.meta.url).href,
   }
 ];
 
