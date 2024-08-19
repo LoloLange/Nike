@@ -38,7 +38,7 @@ export const colorsHex = [
 
 export const navbar = {
   logo: new URL('./src/assets/logo.avif', import.meta.url).href,
-  links: ["NEW & FEATURED", "MEN", "WOMEN", "KIDS", "SALE"],
+  links: [{name: "NEW & FEATURED", link: '/featured'}, {name: "MEN", link: '/men'}, {name: "WOMEN", link: '/women'}, {name: "KIDS", link: '/kids'}, {name: "SALE", link: '/sale'}],
   svg: new URL('./src/assets/shop.svg', import.meta.url).href
 };
 

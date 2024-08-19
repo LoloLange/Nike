@@ -1,0 +1,324 @@
+[
+  {
+    "id": "1",
+    "name": "Nike Air Force 1",
+    "description": "A classic basketball shoe that has transcended its original purpose to become a streetwear staple.",
+    "images": "url_to_image_1",
+    "price": "$90",
+    "color": "White",
+    "characteristics": ["Leather upper", "Air-Sole unit", "Rubber outsole"],
+    "benefits": ["Timeless style", "Comfortable fit", "Durable construction"]
+  },
+  {
+    "id": "2",
+    "name": "Nike Air Jordan 1",
+    "description": "The first signature shoe for Michael Jordan, it revolutionized the sneaker industry.",
+    "images": "url_to_image_2",
+    "price": "$110",
+    "color": "Black/Red",
+    "characteristics": [
+      "High-top design",
+      "Nike Air cushioning",
+      "Rubber outsole"
+    ],
+    "benefits": ["Iconic design", "Excellent ankle support", "Great traction"]
+  },
+  {
+    "id": "3",
+    "name": "Nike Air Max 1",
+    "description": "The original Air Max shoe, known for its visible Air unit in the sole.",
+    "images": "url_to_image_3",
+    "price": "$120",
+    "color": "Grey/White",
+    "characteristics": [
+      "Mesh and suede upper",
+      "Visible Air unit",
+      "Rubber outsole"
+    ],
+    "benefits": [
+      "Unique style",
+      "Comfortable cushioning",
+      "Good shock absorption"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Nike Dunk Low",
+    "description": "A low-top version of the original Dunk, popular in both basketball and skateboarding.",
+    "images": "url_to_image_4",
+    "price": "$100",
+    "color": "Navy/White",
+    "characteristics": ["Leather upper", "Padded collar", "Rubber outsole"],
+    "benefits": [
+      "Versatile design",
+      "Comfortable fit",
+      "Good grip on various surfaces"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Nike Air Max 90",
+    "description": "A classic running shoe with a timeless design and comfortable fit.",
+    "images": "url_to_image_5",
+    "price": "$130",
+    "color": "Black/Red",
+    "characteristics": [
+      "Mesh and leather upper",
+      "Visible Air unit",
+      "Rubber outsole"
+    ],
+    "benefits": ["Stylish look", "Excellent cushioning", "Durable construction"]
+  },
+  {
+    "id": "6",
+    "name": "Nike Air Jordan 3",
+    "description": "The first Nike shoe designed by Tinker Hatfield, it introduced the iconic elephant print.",
+    "images": "url_to_image_6",
+    "price": "$150",
+    "color": "White/Red",
+    "characteristics": ["Leather upper", "Visible Air unit", "Rubber outsole"],
+    "benefits": ["Innovative design", "Great cushioning", "Good traction"]
+  },
+  {
+    "id": "7",
+    "name": "Nike Air Max 97",
+    "description": "A running shoe known for its distinctive wavy design and full-length Air unit.",
+    "images": "url_to_image_7",
+    "price": "$140",
+    "color": "Silver/Red",
+    "characteristics": [
+      "Mesh and leather upper",
+      "Full-length Air unit",
+      "Rubber outsole"
+    ],
+    "benefits": [
+      "Unique style",
+      "Comfortable fit",
+      "Excellent shock absorption"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Nike Blazer Mid",
+    "description": "A vintage basketball shoe that has become a popular choice for casual wear.",
+    "images": "url_to_image_8",
+    "price": "$85",
+    "color": "Black/White",
+    "characteristics": ["Suede upper", "Padded collar", "Rubber outsole"],
+    "benefits": ["Classic design", "Comfortable fit", "Good ankle support"]
+  },
+  {
+    "id": "9",
+    "name": "Nike Air Jordan 4",
+    "description": "A popular basketball shoe known for its unique design and excellent performance.",
+    "images": "url_to_image_9",
+    "price": "$160",
+    "color": "White/Black",
+    "characteristics": ["Leather upper", "Visible Air unit", "Rubber outsole"],
+    "benefits": ["Stylish look", "Great cushioning", "Good traction"]
+  },
+  {
+    "id": "10",
+    "name": "Nike Air Max 180",
+    "description": "A running shoe with a distinctive design and comfortable fit.",
+    "images": "url_to_image_10",
+    "price": "$130",
+    "color": "Black/Red",
+    "characteristics": [
+      "Mesh and leather upper",
+      "Visible Air unit",
+      "Rubber outsole"
+    ],
+    "benefits": ["Unique style", "Excellent cushioning", "Durable construction"]
+  },
+  {
+    "id": "11",
+    "name": "Nike SB Dunk Low",
+    "description": "A skateboarding shoe that has gained popularity in streetwear fashion.",
+    "images": "url_to_image_11",
+    "price": "$110",
+    "color": "Black/Gold",
+    "characteristics": ["Leather upper", "Padded collar", "Rubber outsole"],
+    "benefits": [
+      "Stylish design",
+      "Comfortable fit",
+      "Good grip for skateboarding"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Nike Air Jordan 5",
+    "description": "A basketball shoe known for its unique design and excellent performance.",
+    "images": "url_to_image_12",
+    "price": "$170",
+    "color": "White/Red",
+    "characteristics": ["Leather upper", "Visible Air unit", "Rubber outsole"],
+    "benefits": ["Innovative design", "Great cushioning", "Good traction"]
+  },
+  {
+    "id": "13",
+    "name": "Nike Air Max 200",
+    "description": "A running shoe with a distinctive design and comfortable fit.",
+    "images": "url_to_image_13",
+    "price": "$120",
+    "color": "Black/Green",
+    "characteristics": [
+      "Mesh and leather upper",
+      "Visible Air unit",
+      "Rubber outsole"
+    ],
+    "benefits": ["Unique style", "Excellent cushioning", "Durable construction"]
+  },
+  {
+    "id": "14",
+    "name": "Nike Air Jordan 6",
+    "description": "A popular basketball shoe known for its unique design and excellent performance.",
+    "images": "url_to_image_14",
+    "price": "$180",
+    "color": "White/Black",
+    "characteristics": ["Leather upper", "Visible Air unit", "Rubber outsole"],
+    "benefits": ["Stylish look", "Great cushioning", "Good traction"]
+  },
+  {
+    "id": "15",
+    "name": "Nike Air Max 270",
+    "description": "A lifestyle shoe with a distinctive design and comfortable fit.",
+    "images": "url_to_image_15",
+    "price": "$150",
+    "color": "Black/Red",
+    "characteristics": ["Mesh upper", "Large Air unit", "Rubber outsole"],
+    "benefits": ["Unique style", "Excellent cushioning", "Durable construction"]
+  },
+  {
+    "id": "16",
+    "name": "Nike Air Jordan 7",
+    "description": "A basketball shoe known for its unique design and excellent performance.",
+    "images": "url_to_image_16",
+    "price": "$190",
+    "color": "White/Red",
+    "characteristics": ["Leather upper", "Visible Air unit", "Rubber outsole"],
+    "benefits": ["Innovative design", "Great cushioning", "Good traction"]
+  },
+  {
+    "id": "17",
+    "name": "Nike Air Max 90 Essential",
+    "description": "A classic running shoe with a timeless design and comfortable fit.",
+    "images": "url_to_image_17",
+    "price": "$130",
+    "color": "Black/White",
+    "characteristics": [
+      "Mesh and leather upper",
+      "Visible Air unit",
+      "Rubber outsole"
+    ],
+    "benefits": ["Stylish look", "Excellent cushioning", "Durable construction"]
+  },
+  {
+    "id": "18",
+    "name": "Nike Air Jordan 8",
+    "description": "A popular basketball shoe known for its unique design and excellent performance.",
+    "images": "url_to_image_18",
+    "price": "$200",
+    "color": "White/Black",
+    "characteristics": ["Leather upper", "Visible Air unit", "Rubber outsole"],
+    "benefits": ["Stylish look", "Great cushioning", "Good traction"]
+  },
+  {
+    "id": "19",
+    "name": "Nike Air Max 95",
+    "description": "A running shoe with a distinctive design and comfortable fit.",
+    "images": "url_to_image_19",
+    "price": "$140",
+    "color": "Black/Red",
+    "characteristics": [
+      "Mesh and leather upper",
+      "Visible Air unit",
+      "Rubber outsole"
+    ],
+    "benefits": ["Unique style", "Excellent cushioning", "Durable construction"]
+  },
+  {
+    "id": "20",
+    "name": "Nike Air Jordan 9",
+    "description": "A basketball shoe known for its unique design and excellent performance.",
+    "images": "url_to_image_20",
+    "price": "$210",
+    "color": "White/Black",
+    "characteristics": ["Leather upper", "Visible Air unit", "Rubber outsole"],
+    "benefits": ["Innovative design", "Great cushioning", "Good traction"]
+  },
+  {
+    "id": "21",
+    "name": "Nike Air Max 97 Ultra",
+    "description": "A modern take on the classic Air Max 97, with a sleeker design and updated materials.",
+    "images": "url_to_image_21",
+    "price": "$150",
+    "color": "Silver/Red",
+    "characteristics": [
+      "Mesh and synthetic upper",
+      "Full-length Air unit",
+      "Rubber outsole"
+    ],
+    "benefits": [
+      "Stylish look",
+      "Comfortable fit",
+      "Excellent shock absorption"
+    ]
+  },
+  {
+    "id": "22",
+    "name": "Nike Air Jordan 10",
+    "description": "A popular basketball shoe known for its unique design and excellent performance.",
+    "images": "url_to_image_22",
+    "price": "$220",
+    "color": "Black/Red",
+    "characteristics": ["Leather upper", "Visible Air unit", "Rubber outsole"],
+    "benefits": ["Stylish look", "Great cushioning", "Good traction"]
+  },
+  {
+    "id": "23",
+    "name": "Nike Air Max 1 Premium",
+    "description": "A premium version of the classic Air Max 1, with upgraded materials and finishes.",
+    "images": "url_to_image_23",
+    "price": "$140",
+    "color": "Grey/White",
+    "characteristics": [
+      "Mesh and suede upper",
+      "Visible Air unit",
+      "Rubber outsole"
+    ],
+    "benefits": [
+      "Unique style",
+      "Comfortable cushioning",
+      "Good shock absorption"
+    ]
+  },
+  {
+    "id": "24",
+    "name": "Nike Air Jordan 11",
+    "description": "A legendary basketball shoe known for its unique design and excellent performance.",
+    "images": "url_to_image_24",
+    "price": "$250",
+    "color": "White/Black",
+    "characteristics": ["Leather upper", "Visible Air unit", "Rubber outsole"],
+    "benefits": ["Iconic design", "Great cushioning", "Good traction"]
+  },
+  {
+    "id": "25",
+    "name": "Nike Air Max 1 Ultra",
+    "description": "A modern take on the classic Air Max 1, with a sleeker design and updated materials.",
+    "images": "url_to_image_25",
+    "price": "$130",
+    "color": "Black/Red",
+    "characteristics": [
+      "Mesh and synthetic upper",
+      "Visible Air unit",
+      "Rubber outsole"
+    ],
+    "benefits": [
+      "Stylish look",
+      "Comfortable fit",
+      "Excellent shock absorption"
+    ]
+  }
+]

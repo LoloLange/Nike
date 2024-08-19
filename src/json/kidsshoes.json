@@ -1,0 +1,280 @@
+[
+  {
+    "id": "1",
+    "name": "Nike Air Force 1",
+    "description": "A classic basketball shoe with a timeless design.",
+    "images": "link_to_image1",
+    "price": "$90",
+    "color": "White",
+    "characteristics": ["Leather upper", "Air-Sole unit", "Rubber outsole"],
+    "benefits": ["Durable", "Comfortable", "Stylish"]
+  },
+  {
+    "id": "2",
+    "name": "Nike Revolution 5",
+    "description": "A lightweight running shoe with a soft foam midsole.",
+    "images": "link_to_image2",
+    "price": "$65",
+    "color": "Black",
+    "characteristics": ["Mesh upper", "Foam midsole", "Rubber outsole"],
+    "benefits": ["Breathable", "Cushioned", "Great traction"]
+  },
+  {
+    "id": "3",
+    "name": "Nike Air Max 270",
+    "description": "A lifestyle shoe with a large Air unit for maximum comfort.",
+    "images": "link_to_image3",
+    "price": "$150",
+    "color": "Red",
+    "characteristics": [
+      "Textile and synthetic upper",
+      "Air Max unit",
+      "Rubber outsole"
+    ],
+    "benefits": ["Stylish", "Comfortable", "Good support"]
+  },
+  {
+    "id": "4",
+    "name": "Nike SB Dunk Low",
+    "description": "A skateboarding shoe with a low profile and padded collar.",
+    "images": "link_to_image4",
+    "price": "$110",
+    "color": "Blue",
+    "characteristics": ["Suede upper", "Zoom Air unit", "Rubber outsole"],
+    "benefits": ["Durable", "Good grip", "Comfortable"]
+  },
+  {
+    "id": "5",
+    "name": "Nike Free RN 5.0",
+    "description": "A flexible running shoe that mimics the feeling of running barefoot.",
+    "images": "link_to_image5",
+    "price": "$100",
+    "color": "Green",
+    "characteristics": ["Mesh upper", "Free sole", "Rubber outsole"],
+    "benefits": ["Natural movement", "Lightweight", "Comfortable"]
+  },
+  {
+    "id": "6",
+    "name": "Nike Air Jordan 1",
+    "description": "A basketball shoe that started it all, designed for Michael Jordan.",
+    "images": "link_to_image6",
+    "price": "$160",
+    "color": "Black/Red",
+    "characteristics": ["Leather upper", "Air-Sole unit", "Rubber outsole"],
+    "benefits": ["Iconic design", "Great support", "Comfortable"]
+  },
+  {
+    "id": "7",
+    "name": "Nike Mercurial Superfly 7",
+    "description": "A soccer cleat designed for speed and agility on the field.",
+    "images": "link_to_image7",
+    "price": "$225",
+    "color": "Yellow",
+    "characteristics": ["Flyknit upper", "Dynamic Fit collar", "Chevron studs"],
+    "benefits": ["Lightweight", "Good traction", "Comfortable fit"]
+  },
+  {
+    "id": "8",
+    "name": "Nike Air Huarache",
+    "description": "A retro running shoe with a unique design and comfortable fit.",
+    "images": "link_to_image8",
+    "price": "$120",
+    "color": "Purple",
+    "characteristics": ["Neoprene upper", "Air-Sole unit", "Rubber outsole"],
+    "benefits": ["Stylish", "Comfortable", "Good support"]
+  },
+  {
+    "id": "9",
+    "name": "Nike Zoom Pegasus 36",
+    "description": "A versatile running shoe with responsive cushioning and a breathable upper.",
+    "images": "link_to_image9",
+    "price": "$120",
+    "color": "Orange",
+    "characteristics": ["Mesh upper", "Zoom Air units", "Rubber outsole"],
+    "benefits": ["Cushioned", "Breathable", "Great traction"]
+  },
+  {
+    "id": "10",
+    "name": "Nike Air Presto",
+    "description": "A lightweight and comfortable shoe with a stretchy upper and a snug fit.",
+    "images": "link_to_image10",
+    "price": "$130",
+    "color": "Black",
+    "characteristics": [
+      "Stretchy mesh upper",
+      "Phylon midsole",
+      "Rubber outsole"
+    ],
+    "benefits": ["Flexible", "Comfortable", "Good support"]
+  },
+  {
+    "id": "11",
+    "name": "Nike Cortez",
+    "description": "A classic running shoe with a simple design and a comfortable fit.",
+    "images": "link_to_image11",
+    "price": "$75",
+    "color": "White",
+    "characteristics": ["Leather upper", "Foam midsole", "Rubber outsole"],
+    "benefits": ["Stylish", "Comfortable", "Durable"]
+  },
+  {
+    "id": "12",
+    "name": "Nike Air Max 97",
+    "description": "A retro running shoe with a distinctive design and a visible Air unit.",
+    "images": "link_to_image12",
+    "price": "$170",
+    "color": "Silver",
+    "characteristics": [
+      "Mesh and leather upper",
+      "Air Max unit",
+      "Rubber outsole"
+    ],
+    "benefits": ["Iconic design", "Comfortable", "Good support"]
+  },
+  {
+    "id": "13",
+    "name": "Nike React Infinity Run",
+    "description": "A running shoe designed to reduce the risk of injury with its soft cushioning.",
+    "images": "link_to_image13",
+    "price": "$160",
+    "color": "Blue",
+    "characteristics": ["Mesh upper", "React foam midsole", "Rubber outsole"],
+    "benefits": ["Cushioned", "Stable", "Durable"]
+  },
+  {
+    "id": "14",
+    "name": "Nike Air Zoom Structure 22",
+    "description": "A stability running shoe with responsive cushioning and a supportive fit.",
+    "images": "link_to_image14",
+    "price": "$120",
+    "color": "Black",
+    "characteristics": ["Mesh upper", "Zoom Air units", "Rubber outsole"],
+    "benefits": ["Cushioned", "Supportive", "Great traction"]
+  },
+  {
+    "id": "15",
+    "name": "Nike SB Blazer Mid",
+    "description": "A skateboarding shoe with a high top design and a vintage look.",
+    "images": "link_to_image15",
+    "price": "$85",
+    "color": "White",
+    "characteristics": ["Suede upper", "Rubber outsole", "Padded collar"],
+    "benefits": ["Durable", "Good grip", "Stylish"]
+  },
+  {
+    "id": "16",
+    "name": "Nike Air Force 1 Low",
+    "description": "A low-top version of the classic Air Force 1 basketball shoe.",
+    "images": "link_to_image16",
+    "price": "$90",
+    "color": "Black",
+    "characteristics": ["Leather upper", "Air-Sole unit", "Rubber outsole"],
+    "benefits": ["Durable", "Comfortable", "Stylish"]
+  },
+  {
+    "id": "17",
+    "name": "Nike Zoom Fly 3",
+    "description": "A racing shoe designed for speed with its lightweight construction and responsive cushioning.",
+    "images": "link_to_image17",
+    "price": "$170",
+    "color": "Pink",
+    "characteristics": ["Mesh upper", "ZoomX foam midsole", "Rubber outsole"],
+    "benefits": ["Lightweight", "Cushioned", "Great traction"]
+  },
+  {
+    "id": "18",
+    "name": "Nike Air Max 1",
+    "description": "A classic running shoe with a timeless design and a visible Air unit.",
+    "images": "link_to_image18",
+    "price": "$140",
+    "color": "Red",
+    "characteristics": [
+      "Mesh and leather upper",
+      "Air Max unit",
+      "Rubber outsole"
+    ],
+    "benefits": ["Iconic design", "Comfortable", "Good support"]
+  },
+  {
+    "id": "19",
+    "name": "Nike React Element 55",
+    "description": "A lifestyle shoe with a unique design and a comfortable fit.",
+    "images": "link_to_image19",
+    "price": "$130",
+    "color": "Black",
+    "characteristics": ["Mesh upper", "React foam midsole", "Rubber outsole"],
+    "benefits": ["Stylish", "Comfortable", "Good support"]
+  },
+  {
+    "id": "20",
+    "name": "Nike Air Max 270 React",
+    "description": "A hybrid shoe that combines the Air Max 270 and React technologies for maximum comfort.",
+    "images": "link_to_image20",
+    "price": "$150",
+    "color": "Blue",
+    "characteristics": [
+      "Mesh and synthetic upper",
+      "Air Max unit",
+      "React foam midsole"
+    ],
+    "benefits": ["Stylish", "Cushioned", "Good support"]
+  },
+  {
+    "id": "21",
+    "name": "Nike Zoom KD 12",
+    "description": "A basketball shoe designed for Kevin Durant with its responsive cushioning and lockdown fit.",
+    "images": "link_to_image21",
+    "price": "$160",
+    "color": "Black",
+    "characteristics": ["Mesh upper", "Zoom Air units", "Rubber outsole"],
+    "benefits": ["Cushioned", "Supportive", "Great traction"]
+  },
+  {
+    "id": "22",
+    "name": "Nike Air Max 90",
+    "description": "A classic running shoe with a timeless design and a visible Air unit.",
+    "images": "link_to_image22",
+    "price": "$140",
+    "color": "White",
+    "characteristics": [
+      "Mesh and leather upper",
+      "Air Max unit",
+      "Rubber outsole"
+    ],
+    "benefits": ["Iconic design", "Comfortable", "Good support"]
+  },
+  {
+    "id": "23",
+    "name": "Nike React Vision",
+    "description": "A lifestyle shoe with a unique design and a comfortable fit.",
+    "images": "link_to_image23",
+    "price": "$130",
+    "color": "Purple",
+    "characteristics": ["Mesh upper", "React foam midsole", "Rubber outsole"],
+    "benefits": ["Stylish", "Comfortable", "Good support"]
+  },
+  {
+    "id": "24",
+    "name": "Nike Air Zoom Pegasus Turbo 2",
+    "description": "A high-performance running shoe with responsive cushioning and a lightweight construction.",
+    "images": "link_to_image24",
+    "price": "$180",
+    "color": "Green",
+    "characteristics": ["Mesh upper", "ZoomX foam midsole", "Rubber outsole"],
+    "benefits": ["Lightweight", "Cushioned", "Great traction"]
+  },
+  {
+    "id": "25",
+    "name": "Nike Air Max 2090",
+    "description": "A modern take on the classic Air Max 90 with a futuristic design and a visible Air unit.",
+    "images": "link_to_image25",
+    "price": "$150",
+    "color": "Black",
+    "characteristics": [
+      "Mesh and synthetic upper",
+      "Air Max unit",
+      "Rubber outsole"
+    ],
+    "benefits": ["Stylish", "Comfortable", "Good support"]
+  }
+]

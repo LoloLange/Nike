@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { navbar } from "../../constants";
+import { Link } from "react-router-dom";
 
 export const MobileNavbar = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -42,20 +43,20 @@ export const MobileNavbar = () => {
             alt="Nike Logo"
           />
           <ul className="flex justify-center items-center flex-col text-white">
-            {links.map((link) => (
+            {links.map((l) => (
               <li
-                key={link.replace(" ", "-")}
-                className="hover:text-[#CCC] hover:brightness-90 transition-all"
+                key={l.name}
+                className="hover:text-[#CCC] hover:brightness-90 transition-all mb-8 text-[25px]"
                 onClick={() => setIsClicked(false)}
               >
-                <button className="text-[25px] mb-8">{link}</button>
+                <Link to={l.link}>{l.name}</Link>
               </li>
             ))}
           </ul>
         </div>
       )}
       <img
-        className="w-8 -translate-y-1 cursor-pointer select-none"
+        className="w-9 -translate-y-2 cursor-pointer select-none"
         src={navbar.svg}
         alt="Shopping bag icon"
       />

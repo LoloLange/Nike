@@ -40,3 +40,9 @@ html {
   -o-transform: translateY(-13px) rotate(-45deg);
   transform: translateY(-13px) rotate(-45deg);
 }
+
+
+#shoes > div:last-child:only-child {
+  justify-self: flex-start;
+  margin-left: 0;
+}
