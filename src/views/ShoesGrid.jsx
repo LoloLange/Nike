@@ -3,26 +3,44 @@
 import { Navbar } from "./Navbar";
 import { ShoeCard } from "../components/ShoeCard";
 import { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from "react-router-dom";
+import men from "../json/menshoes.json";
+import women from "../json/womenshoes.json";
+import kids from "../json/kidsshoes.json";
+import sale from "../json/saleshoes.json";
+import { NotFound } from "./NotFound";
 
-export const Shoes = ({ json }) => {
+export const ShoesGrid = () => {
   const [quantity, setQuantity] = useState(10);
   const [buttonVisibility, setButtonVisibility] = useState(true);
-  const location = useLocation()
+  const location = useLocation();
 
   useEffect(() => {
-    if (quantity < json.length) {
+    if (quantity < shoes.length) {
       setButtonVisibility(true);
     } else {
       setButtonVisibility(false);
     }
   }, [quantity]);
 
+  const categories = {
+    men,
+    women,
+    kids,
+    sale,
+  };
+
+  const { category } = useParams();
+  console.log(category);
+  const shoes = categories[category] || [];
+
+  if (!categories[category]) {
+    return <NotFound />;
+  }
+
   const seeMore = () => {
     setQuantity((prev) => prev + 5);
   };
-
-  const shoesName = location.pathname.slice(1).charAt(0).toUpperCase() + location.pathname.slice(2);
 
   return (
     <>
@@ -32,7 +50,9 @@ export const Shoes = ({ json }) => {
 
       <section className="mx-[50px] min-[1300px]:mx-[75px] text-black">
         <div className="mb-[50px] mt-5">
-          <p className="font-poppins text-5xl font-bold">{shoesName}</p>
+          <p className="font-poppins text-5xl font-bold">
+            {category.charAt(0).toUpperCase() + location.pathname.slice(2)}
+          </p>
           <hr className="border-[#bbb] mt-5" />
         </div>
 
@@ -40,7 +60,7 @@ export const Shoes = ({ json }) => {
           id="shoes"
           className="grid gap-x-12 min-[1750px]:gap-x-24 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] min-[600px]:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] min-[800px]:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] min-[1200px]:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] min-[1750px]:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] min-[2200px]:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] min-[1750px]:mr-[100px]"
         >
-          {json
+          {shoes
             .map((s) => <ShoeCard key={s.id} name={s.name} price={s.price} />)
             .slice(0, quantity)}
         </div>

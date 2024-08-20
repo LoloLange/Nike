@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { navbar } from "../../constants";
 import { Link } from "react-router-dom";
 
-export const MobileNavbar = () => {
+export const MobileNavbar = ({ theme }) => {
   const [isClicked, setIsClicked] = useState(false);
 
   const { links } = navbar;
@@ -28,9 +29,9 @@ export const MobileNavbar = () => {
             id="hamburger-1"
             onClick={() => setIsClicked(!isClicked)}
           >
-            <span className="line"></span>
-            <span className="line"></span>
-            <span className="line"></span>
+            <span className={`line ${theme === 'white' ? 'bg-[#FFF]' : 'bg-[#000]'}`}></span>
+            <span className={`line ${theme === 'white' ? 'bg-[#FFF]' : 'bg-[#000]'}`}></span>
+            <span className={`line ${theme === 'white' ? 'bg-[#FFF]' : 'bg-[#000]'}`}></span>
           </div>
         </div>
       </div>
@@ -55,11 +56,21 @@ export const MobileNavbar = () => {
           </ul>
         </div>
       )}
-      <img
-        className="w-9 -translate-y-2 cursor-pointer select-none"
-        src={navbar.svg}
-        alt="Shopping bag icon"
-      />
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke={theme === 'white' ? '#FFF' : '#000'}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag max-w-9 cursor-pointer select-none"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
+        <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+      </svg>
     </div>
   );
 };

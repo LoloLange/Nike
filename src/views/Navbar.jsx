@@ -18,5 +18,5 @@ export const Navbar = ({ theme }) => {
       };
     }, []);
 
-    return width > 768 ? <DesktopNavbar theme={theme}/> : <MobileNavbar />
+    return width > 768 ? <DesktopNavbar theme={theme}/> : <MobileNavbar theme={theme} />
 }

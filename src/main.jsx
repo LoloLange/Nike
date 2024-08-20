@@ -3,11 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './views/App.jsx'
 import './index.css'
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
-import { Shoes } from './views/Shoes.jsx'
-import men from './json/menshoes.json'
-import women from './json/womenshoes.json'
-import kids from './json/kidsshoes.json'
-import sale from './json/saleshoes.json'
+import { ShoesGrid } from './views/ShoesGrid.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -19,20 +16,15 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path: '/men',
-    element: <Shoes json={men} />
+    path: ':category',
+    element: <ShoesGrid />
   },
   {
-    path: '/women',
-    element: <Shoes json={women} />
+    path: ':'
   },
   {
-    path: '/kids',
-    element: <Shoes json={kids} />
-  },
-  {
-    path: '/sale',
-    element: <Shoes json={sale} />
+    path: '*',
+    element: <p className=''>Error 404</p>
   },
 ])
 
