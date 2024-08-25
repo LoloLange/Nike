@@ -1,12 +1,12 @@
+/* eslint-disable react/prop-types */
 import { useState, useRef } from "react";
 import { colors } from "../../constants";
 import { sizes } from "../../constants";
 import { jordanDescription } from "../../constants";
 import { colorsHex } from "../../constants";
 
-export const Hero = () => {
+export const Hero = ({ activeColor, setActiveColor }) => {
   const [size, setSize] = useState(null);
-  const [activeColor, setActiveColor] = useState(["#960001", "red", 0]);
   const imageRef = useRef(null);
   const textRef = useRef(null);
 
@@ -31,14 +31,8 @@ export const Hero = () => {
 
   return (
     <>
-      <img
-        src={colors[activeColor[2]].bg}
-        className="absolute top-0 left-0 w-screen max-[400px]:h-[1200px] max-[700px]:h-[1250px] max-[1100px]:h-[1300px] h-screen pointer-events-none select-none -z-50"
-        alt="page background"
-      />
-
       <main className="max-[1650px]:flex max-[1650px]:justify-between max-[1200px]:justify-between max-[1100px]:justify-center max-[1100px]:flex-wrap">
-        <div className="flex justify-center items-center min-[1100px]:order-1 max-[1100px]:w-[800px] max-[1000px]:w-[600px] max-[1650px]:w-[800px] max-[1100px]:h-[200px] max-[1100px]:mt-[200px] max-[700px]:mt-[150px] max-[400px]:mt-[100px] max-[1650px]:h-[700px] min-[1101px]:mr-[400px] min-[1200px]:mr-[400px] min-[1400px]:mr-[300px] min-[1650px]:mr-0">
+        <div className="flex justify-center items-center min-[1100px]:order-1 max-[1100px]:w-[800px] max-[1000px]:w-[600px] max-[1650px]:w-[800px] max-[1100px]:h-[200px] max-[1100px]:mt-[200px] max-[700px]:mt-[150px] max-[400px]:mt-[100px] min-[1101px]:mr-[400px] min-[1200px]:mr-[400px] min-[1400px]:mr-[300px] min-[1650px]:mr-0">
           <div className="flex justify-center absolute -z-10 min-[1651px]:-top-0 items-center min-[1651px]:min-h-screen min-[1651px]:w-screen min-[1100px]:mr-28 min-[1200px]:mr-0">
             <p
               ref={textRef}
@@ -56,7 +50,7 @@ export const Hero = () => {
         </div>
 
         <section className="flex max-[1100px]:justify-start max-[1000px]:mt-16 max-[600px]:w-[450px] max-[700px]:w-[500px] max-[600px]:w-[430px] max-[500px]:w-[360px] max-[400px]:w-[300px]">
-          <div className="min-[1000px]:pl-16 min-[2200px]:pl-20 min-[2500px]:pl-28 h-[680px] min-[1950px]:h-[730px] min-[2000px]:h-[900px] min-[2200px]:h-[925px] min-[2500px]:h-[950px] text-white flex flex-col justify-end">
+          <div className="min-[1000px]:pl-16 min-[2200px]:pl-20 min-[2500px]:pl-28 text-white flex flex-col justify-end mt-2 min-[600px]:mt-14 min-[600px]:mt-24 min-[1000px]:mt-40 min-[1100px]:mt-0">
             <div className="animate-slide-in-bottom duration-700">
               <p className="text-[30px] min-[400px]:text-[36px] min-[500px]:text-[40px] min-[2000px]:text-[55px] min-[2200px]:text-[60px] min-[2500px]:text-[65px] font-bold max-[1100px]:w-[800px] max-[1000px]:w-[500px] max-[600px]:w-[450px] max-[500px]:w-[360px] max-[400px]:w-[300px] w-fit">
                 JORDAN 1 MID {colors[activeColor[2]].color_text}
@@ -87,7 +81,9 @@ export const Hero = () => {
               </div>
             </div>
             <div className="pt-5 min-[2000px]:pt-8 animate-fade-in-up animate-duration-[1500ms]">
-              <p className="font-bold text-xl min-[400px]:text-2xl min-[2000px]:text-3xl">Color</p>
+              <p className="font-bold text-xl min-[400px]:text-2xl min-[2000px]:text-3xl">
+                Color
+              </p>
               <div className="flex justify-between w-[220px] min-[2000px]:w-[260px] pt-2 min-[2000px]:pt-5 min-[2200px]:pt-6">
                 {colorsHex.map((c) => (
                   <span
@@ -105,7 +101,7 @@ export const Hero = () => {
                 ))}
               </div>
               <button className="p-2 min-[2000px]:py-3 text-xl min-[2000px]:text-3xl w-[300px] min-[400px]:w-[360px] min-[500px]:w-[430px] min-[600px]:w-[500px] min-[700px]:w-[600px] min-[1000px]:w-[700px] min-[1100px]:w-[375px] min-[1750px]:w-[400px] min-[2000px]:w-[450px] min-[2200px]:w-[480px] border-2 text-white mt-9 min-[2000px]:mt-11 font-bold rounded-md shadow-2xl hover:-translate-y-1 transition-all animate-fade-in-up animate-duration-[1800ms]">
-                BUY NOW
+                ADD TO CART
               </button>
             </div>
           </div>

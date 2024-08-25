@@ -45,3 +45,9 @@ export const navbar = {
 export const sizes = [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11];
 
 export const jordanDescription = "Step into iconic style with Nike Men's Air Jordan 1 Mid. These sneakers blend heritage design with modern flair. The premium leather upper and Air-Sole unit provide comfort and support. With a timeless silhouette and distinctive colorways, the Air Jordan 1 Mid makes a bold statement on and off the court. Elevate your sneaker game with this fusion of heritage and contemporary style from Nike's legendary Jordan collection.";
+
+export const FooterContact = [
+  { label: "Address", text: "Miami 1234, US" },
+  { label: "Email", text: "info@example.com" },
+  { label: "Phone", text: "+1 2345 6789" },
+];

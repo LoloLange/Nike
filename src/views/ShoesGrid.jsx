@@ -48,7 +48,7 @@ export const ShoesGrid = () => {
         <Navbar theme="dark" />
       </div>
 
-      <section className="mx-[50px] min-[1300px]:mx-[75px] text-black">
+      <section className="mx-[50px] min-[1300px]:mx-[75px] text-black max-[768px]:pt-5">
         <div className="mb-[50px] mt-5">
           <p className="font-poppins text-5xl font-bold">
             {category.charAt(0).toUpperCase() + location.pathname.slice(2)}
