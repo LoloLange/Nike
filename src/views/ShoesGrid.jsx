@@ -61,7 +61,7 @@ export const ShoesGrid = () => {
           className="grid gap-x-12 min-[1750px]:gap-x-24 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] min-[600px]:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] min-[800px]:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] min-[1200px]:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] min-[1750px]:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] min-[2200px]:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] min-[1750px]:mr-[100px]"
         >
           {shoes
-            .map((s) => <ShoeCard key={s.id} name={s.name} price={s.price} />)
+            .map((s) => <ShoeCard key={s.id} name={s.name} price={s.price} description={s.description} image={s.image} benefits={s.benefits} characteristics={s.characteristics} />)
             .slice(0, quantity)}
         </div>
 
@@ -69,20 +69,18 @@ export const ShoesGrid = () => {
           <div className="flex justify-center mb-10">
             <button
               onClick={() => seeMore()}
-              className="w-[200px] text-2xl bg-black text-white rounded-lg p-3 flex justify-center items-center"
+              className="w-[200px] min-[1700px]:w-[250px] min-[1700px]:py-4 text-2xl min-[1700px]:text-3xl bg-black text-white rounded-lg p-3 flex justify-center items-center"
             >
               See more
               <svg
+                className="size-[24px] min-[1700px]:size-[36px] ml-2"
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="ml-2"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M5 12l14 0" />

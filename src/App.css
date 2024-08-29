@@ -53,3 +53,9 @@ html {
     padding-bottom: 100px;
   }
 }
+
+@media (max-width: 400px) {
+  #background {
+    padding-bottom: 300px;
+  }
+}

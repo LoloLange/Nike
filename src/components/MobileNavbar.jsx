@@ -9,16 +9,16 @@ export const MobileNavbar = ({ theme }) => {
   const { links } = navbar;
 
   useEffect(() => {
-    if(isClicked) {
-      document.body.style.overflow = 'hidden';
+    if (isClicked) {
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
 
     return () => {
-      document.body.style.overflow = 'auto';
-    }
-  }, [isClicked])
+      document.body.style.overflow = "auto";
+    };
+  }, [isClicked]);
 
   return (
     <div className="z-50 font-poppins flex justify-between items-center text-center px-12 h-20 text-white font-semibold pt-5">
@@ -29,9 +29,21 @@ export const MobileNavbar = ({ theme }) => {
             id="hamburger-1"
             onClick={() => setIsClicked(!isClicked)}
           >
-            <span className={`line ${theme === 'white' ? 'bg-[#FFF]' : 'bg-[#000]'}`}></span>
-            <span className={`line ${theme === 'white' ? 'bg-[#FFF]' : 'bg-[#000]'}`}></span>
-            <span className={`line ${theme === 'white' ? 'bg-[#FFF]' : 'bg-[#000]'}`}></span>
+            <span
+              className={`line ${
+                isClicked ? ("bg-[#FFF]") : (theme === "white" ? "bg-[#FFF]" : "bg-[#000]")
+              }`}
+            ></span>
+            <span
+              className={`line ${
+                isClicked ? ("bg-[#FFF]") : (theme === "white" ? "bg-[#FFF]" : "bg-[#000]")
+              }`}
+            ></span>
+            <span
+              className={`line ${
+                isClicked ? ("bg-[#FFF]") : (theme === "white" ? "bg-[#FFF]" : "bg-[#000]")
+              }`}
+            ></span>
           </div>
         </div>
       </div>
@@ -57,20 +69,22 @@ export const MobileNavbar = ({ theme }) => {
         </div>
       )}
 
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke={theme === 'white' ? '#FFF' : '#000'}
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag max-w-9 cursor-pointer select-none"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
-        <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
-      </svg>
+      <Link to={'/bag'}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke={theme === "white" ? "#FFF" : "#000"}
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag w-9 cursor-pointer select-none"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
+          <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+        </svg>
+      </Link>
     </div>
   );
 };

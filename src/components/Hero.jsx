@@ -4,15 +4,20 @@ import { colors } from "../../constants";
 import { sizes } from "../../constants";
 import { jordanDescription } from "../../constants";
 import { colorsHex } from "../../constants";
+import { Toast } from "./Toast";
 
 export const Hero = ({ activeColor, setActiveColor }) => {
   const [size, setSize] = useState(null);
+  const [toast, setToast] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
+  const [sizeMessage, setSizeMessage] = useState(false);
   const imageRef = useRef(null);
   const textRef = useRef(null);
 
   const getSize = (s) => {
     if (s !== size) {
       setSize(s);
+      setSizeMessage(false);
     } else {
       setSize(null);
     }
@@ -27,6 +32,25 @@ export const Hero = ({ activeColor, setActiveColor }) => {
         imageRef.current.classList.add("animate-slide-in-right");
       }
     }
+  };
+
+  const buttonClick = () => {
+    if (size !== null) {
+      setToast(true);
+      
+      // set bag
+      const bag = JSON.parse(localStorage.getItem("bag")) || [];
+      bag.push({ name: 'JORDAN 1 MID ' + colors[activeColor[2]].color_text, image: colors[activeColor[2]].shoe, price: '$125', size: size });
+      localStorage.setItem("bag", JSON.stringify(bag));
+      setTimeout(() => {
+        setFadeOut(true);
+      }, 2500)
+      setTimeout(() => {
+        setSize(null);
+        setToast(false);
+        setFadeOut(false);
+      }, 3000);
+    } else setSizeMessage(true);
   };
 
   return (
@@ -79,6 +103,11 @@ export const Hero = ({ activeColor, setActiveColor }) => {
                   </p>
                 ))}
               </div>
+              {sizeMessage && (
+              <p className="text-white pt-2 text-sm min-[900px]:text-base">
+                Please select a size
+              </p>
+            )}
             </div>
             <div className="pt-5 min-[2000px]:pt-8 animate-fade-in-up animate-duration-[1500ms]">
               <p className="font-bold text-xl min-[400px]:text-2xl min-[2000px]:text-3xl">
@@ -100,12 +129,13 @@ export const Hero = ({ activeColor, setActiveColor }) => {
                   ></span>
                 ))}
               </div>
-              <button className="p-2 min-[2000px]:py-3 text-xl min-[2000px]:text-3xl w-[300px] min-[400px]:w-[360px] min-[500px]:w-[430px] min-[600px]:w-[500px] min-[700px]:w-[600px] min-[1000px]:w-[700px] min-[1100px]:w-[375px] min-[1750px]:w-[400px] min-[2000px]:w-[450px] min-[2200px]:w-[480px] border-2 text-white mt-9 min-[2000px]:mt-11 font-bold rounded-md shadow-2xl hover:-translate-y-1 transition-all animate-fade-in-up animate-duration-[1800ms]">
-                ADD TO CART
+              <button onClick={() => buttonClick()} className="p-2 min-[2000px]:py-3 text-xl min-[2000px]:text-3xl w-[300px] min-[400px]:w-[360px] min-[500px]:w-[430px] min-[600px]:w-[500px] min-[700px]:w-[600px] min-[1000px]:w-[700px] min-[1100px]:w-[375px] min-[1750px]:w-[400px] min-[2000px]:w-[450px] min-[2200px]:w-[480px] border-2 text-white mt-9 min-[2000px]:mt-11 font-bold rounded-md shadow-2xl hover:-translate-y-1 transition-all animate-fade-in-up animate-duration-[1800ms]">
+                ADD TO BAG
               </button>
             </div>
           </div>
         </section>
+        {toast && <Toast name={'JORDAN 1 MID ' + colors[activeColor[2]].color_text} size={size} price={'$125'} image={colors[activeColor[2]].shoe} fadeout={fadeOut} />}
       </main>
     </>
   );

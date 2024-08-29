@@ -4,6 +4,8 @@ import App from './views/App.jsx'
 import './index.css'
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { ShoesGrid } from './views/ShoesGrid.jsx'
+import { ShoeDetail } from './views/ShoeDetail.jsx'
+import { Bag } from './views/Bag.jsx'
 
 
 const router = createBrowserRouter([
@@ -20,7 +22,12 @@ const router = createBrowserRouter([
     element: <ShoesGrid />
   },
   {
-    path: ':'
+    path: ':category/:shoe',
+    element: <ShoeDetail />
+  },
+  {
+    path: '/bag',
+    element: <Bag />
   },
   {
     path: '*',
