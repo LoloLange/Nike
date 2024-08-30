@@ -3,9 +3,11 @@ import "../App.css";
 import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { Navbar } from "./Navbar";
+import { useBag } from "../context/useBag";
 
 function App() {
   const [activeColor, setActiveColor] = useState(["#960001", "red", 0]);
+  const { bag, setBag } = useBag();
 
   const bg = () => {
     if (activeColor[1] === "red") {
@@ -29,7 +31,7 @@ function App() {
         }}
       >
         <Navbar theme="white" />
-        <Hero activeColor={activeColor} setActiveColor={setActiveColor} />
+        <Hero activeColor={activeColor} setActiveColor={setActiveColor} bag={bag} setBag={setBag} />
         {/* <Footer /> */}
       </div>
     </>

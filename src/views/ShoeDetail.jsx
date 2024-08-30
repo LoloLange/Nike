@@ -1,19 +1,30 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { Link, Navigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Navbar } from "./Navbar";
-import { sizes } from "../../constants";
+import { sizeMen, sizeWomen, sizeKids, sizeSale } from "../../constants";
 import { useState } from "react";
 import { Toast } from "../components/Toast";
+import { useBag } from "../context/useBag";
 
 export const ShoeDetail = () => {
   const [size, setSize] = useState(null);
   const [sizeMessage, setSizeMessage] = useState(false);
   const [toast, setToast] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+  const { bag, setBag } = useBag();
   const location = useLocation();
-  const { name, price, image, description, benefits, characteristics } =
+  const { name, price, image, description, category, originalPrice } =
     location.state || [];
+
+  const sizes = {
+    men: sizeMen,
+    women: sizeWomen,
+    kids: sizeKids,
+    sale: sizeSale,
+  };
+
+  let sizeKey = location.pathname.split("/")[1];
 
   const getSize = (s) => {
     if (s !== size) {
@@ -28,10 +39,12 @@ export const ShoeDetail = () => {
     if (size !== null) {
       setToast(true);
       // set bag
-      const bag = JSON.parse(localStorage.getItem("bag")) || [];
-      bag.push({ name, image: image, price, size: size });
-      localStorage.setItem("bag", JSON.stringify(bag));
+      const newBag = [...bag, { name, image, price, size, category }];
 
+      if (newBag.length < 19) {
+        setBag(newBag);
+        localStorage.setItem("bag", JSON.stringify(newBag));
+      }
       setTimeout(() => {
         setFadeOut(true);
       }, 2500);
@@ -45,7 +58,7 @@ export const ShoeDetail = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar bag={bag} />
       <div className="flex justify-center max-[1300px]:items-center font-poppins pt-12 min-[1200px]:mx-[200px] min-[1300px]:mx-0 flex-wrap">
         <img
           src={image}
@@ -55,17 +68,25 @@ export const ShoeDetail = () => {
           <p className="text-4xl min-[1750px]:text-5xl min-[2000px]:text-7xl font-bold">
             {name}
           </p>
-          <p className="pt-2 min-[1750px]:text-lg min-[2000px]:text-xl">
+          <p className="pt-2 min-[1750px]:text-lg min-[2000px]:text-xl pb-6">
             {description}
           </p>
-          <p className="text-2xl min-[1750px]:text-3xl min-[2000px]:text-4xl pt-6">
-            {price}
-          </p>
+          <span className="text-2xl min-[1750px]:text-3xl min-[2000px]:text-4xl flex">
+            <p className="pr-2">{price}</p>{" "}
+            <p className="text-gray-400 opacity-75 line-through text-xl flex items-center">
+              {originalPrice}
+            </p>
+          </span>
+          <p className="text-green-600 font-semibold mt-1">{originalPrice && ((parseFloat(originalPrice.slice(1) - price.slice(1)) / parseFloat(originalPrice.slice(1))) * 100).toFixed(2) + '% Discount'}</p>
           <div className="text-lg min-[1750px]:text-2xl min-[2000px]:text-3xl font-medium pt-8">
             <p>Pick your size</p>
             {/* <a href="https://www.nike.com/size-fit/mens-footwear" target="_blank" className="opacity-50">Size Guide</a> */}
-            <div className="flex flex-wrap min-[1750px]:mt-3">
-              {sizes.map((s) => (
+            <div
+              className={`flex flex-wrap min-[1750px]:mt-3 ${
+                toast ? "select-none pointer-events-none" : ""
+              }`}
+            >
+              {sizes[sizeKey].map((s) => (
                 <p
                   key={s}
                   className={`border rounded-lg transition-all duration-200 ${

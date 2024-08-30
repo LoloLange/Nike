@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useState, useRef } from "react";
 import { colors } from "../../constants";
-import { sizes } from "../../constants";
+import { sizeMen } from "../../constants";
 import { jordanDescription } from "../../constants";
 import { colorsHex } from "../../constants";
 import { Toast } from "./Toast";
 
-export const Hero = ({ activeColor, setActiveColor }) => {
+export const Hero = ({ activeColor, setActiveColor, bag, setBag }) => {
   const [size, setSize] = useState(null);
   const [toast, setToast] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
@@ -37,14 +37,23 @@ export const Hero = ({ activeColor, setActiveColor }) => {
   const buttonClick = () => {
     if (size !== null) {
       setToast(true);
-      
       // set bag
-      const bag = JSON.parse(localStorage.getItem("bag")) || [];
-      bag.push({ name: 'JORDAN 1 MID ' + colors[activeColor[2]].color_text, image: colors[activeColor[2]].shoe, price: '$125', size: size });
-      localStorage.setItem("bag", JSON.stringify(bag));
+      const updatedBag = [
+        ...bag,
+        {
+          name: "JORDAN 1 MID " + colors[activeColor[2]].color_text,
+          image: colors[activeColor[2]].cartImg,
+          price: "$125",
+          size: size,
+          category: 'men',
+        },
+      ];
+
+      localStorage.setItem("bag", JSON.stringify(updatedBag));
+      setBag(updatedBag);
       setTimeout(() => {
         setFadeOut(true);
-      }, 2500)
+      }, 2500);
       setTimeout(() => {
         setSize(null);
         setToast(false);
@@ -90,8 +99,12 @@ export const Hero = ({ activeColor, setActiveColor }) => {
               <p className="font-bold text-xl min-[400px]:text-2xl min-[2000px]:text-3xl">
                 Size (US)
               </p>
-              <div className="flex flex-wrap w-[300px] min-[400px]:w-[360px] min-[500px]:w-[450px] min-[600px]:w-[500px] min-[700px]:w-[600px] min-[1000px]:w-[800px] min-[1100px]:w-[450px] min-[2000px]:w-[500px] min-[2000px]:mt-2">
-                {sizes.map((s) => (
+              <div
+                className={`flex flex-wrap w-[300px] min-[400px]:w-[360px] min-[500px]:w-[450px] min-[600px]:w-[500px] min-[700px]:w-[600px] min-[1000px]:w-[800px] min-[1100px]:w-[450px] min-[2000px]:w-[500px] min-[2000px]:mt-2 ${
+                  toast ? "select-none pointer-events-none" : ""
+                }`}
+              >
+                {sizeMen.map((s) => (
                   <p
                     key={s}
                     className={`border rounded-sm transition-all duration-200 ${
@@ -104,16 +117,18 @@ export const Hero = ({ activeColor, setActiveColor }) => {
                 ))}
               </div>
               {sizeMessage && (
-              <p className="text-white pt-2 text-sm min-[900px]:text-base">
-                Please select a size
-              </p>
-            )}
+                <p className="text-white pt-2 text-sm min-[900px]:text-base">
+                  Please select a size
+                </p>
+              )}
             </div>
             <div className="pt-5 min-[2000px]:pt-8 animate-fade-in-up animate-duration-[1500ms]">
               <p className="font-bold text-xl min-[400px]:text-2xl min-[2000px]:text-3xl">
                 Color
               </p>
-              <div className="flex justify-between w-[220px] min-[2000px]:w-[260px] pt-2 min-[2000px]:pt-5 min-[2200px]:pt-6">
+              <div
+                className={`flex justify-between w-[220px] min-[2000px]:w-[260px] pt-2 min-[2000px]:pt-5 min-[2200px]:pt-6`}
+              >
                 {colorsHex.map((c) => (
                   <span
                     key={c.hex}
@@ -129,13 +144,25 @@ export const Hero = ({ activeColor, setActiveColor }) => {
                   ></span>
                 ))}
               </div>
-              <button onClick={() => buttonClick()} className="p-2 min-[2000px]:py-3 text-xl min-[2000px]:text-3xl w-[300px] min-[400px]:w-[360px] min-[500px]:w-[430px] min-[600px]:w-[500px] min-[700px]:w-[600px] min-[1000px]:w-[700px] min-[1100px]:w-[375px] min-[1750px]:w-[400px] min-[2000px]:w-[450px] min-[2200px]:w-[480px] border-2 text-white mt-9 min-[2000px]:mt-11 font-bold rounded-md shadow-2xl hover:-translate-y-1 transition-all animate-fade-in-up animate-duration-[1800ms]">
+              <button
+                disabled={toast}
+                onClick={() => buttonClick()}
+                className="p-2 min-[2000px]:py-3 text-xl min-[2000px]:text-3xl w-[300px] min-[400px]:w-[360px] min-[500px]:w-[430px] min-[600px]:w-[500px] min-[700px]:w-[600px] min-[1000px]:w-[700px] min-[1100px]:w-[375px] min-[1750px]:w-[400px] min-[2000px]:w-[450px] min-[2200px]:w-[480px] border-2 text-white mt-9 min-[2000px]:mt-11 font-bold rounded-md shadow-2xl hover:-translate-y-1 transition-all animate-fade-in-up animate-duration-[1800ms]"
+              >
                 ADD TO BAG
               </button>
             </div>
           </div>
         </section>
-        {toast && <Toast name={'JORDAN 1 MID ' + colors[activeColor[2]].color_text} size={size} price={'$125'} image={colors[activeColor[2]].shoe} fadeout={fadeOut} />}
+        {toast && (
+          <Toast
+            name={"JORDAN 1 MID " + colors[activeColor[2]].color_text}
+            size={size}
+            price={"$125"}
+            image={colors[activeColor[2]].cartImg}
+            fadeout={fadeOut}
+          />
+        )}
       </main>
     </>
   );

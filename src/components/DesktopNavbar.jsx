@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { navbar } from "../../constants";
 import { Link } from "react-router-dom";
 
-export const DesktopNavbar = ({ theme }) => {
+export const DesktopNavbar = ({ theme, bag }) => {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -17,11 +18,7 @@ export const DesktopNavbar = ({ theme }) => {
   }, [window.innerWidth]);
 
   const navbarLinksLength = () => {
-    if (width < 2000) {
-      return 125;
-    } else if (width > 2000) {
-      return 170;
-    }
+    return width < 2000 ? 125 : 170
   };
 
   return (
@@ -54,7 +51,7 @@ export const DesktopNavbar = ({ theme }) => {
           </li>
         ))}
       </ul>
-      <Link to={'/bag'}>
+      <Link to={"/bag"}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -69,6 +66,16 @@ export const DesktopNavbar = ({ theme }) => {
           <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
           <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
         </svg>
+
+        {bag.length > 0 && (
+          <p
+            className={`absolute translate-x-4 -translate-y-6 flex justify-center items-center size-[20px] text-sm  rounded-full ${
+              theme === "white" ? "text-gray-500 bg-white" : "text-white bg-black"
+            }`}
+          >
+            {bag.length}
+          </p>
+        )}
       </Link>
     </section>
   );

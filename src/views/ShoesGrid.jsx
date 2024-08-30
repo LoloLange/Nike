@@ -31,7 +31,6 @@ export const ShoesGrid = () => {
   };
 
   const { category } = useParams();
-  console.log(category);
   const shoes = categories[category] || [];
 
   if (!categories[category]) {
@@ -58,10 +57,22 @@ export const ShoesGrid = () => {
 
         <div
           id="shoes"
-          className="grid gap-x-12 min-[1750px]:gap-x-24 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] min-[600px]:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] min-[800px]:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] min-[1200px]:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] min-[1750px]:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] min-[2200px]:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] min-[1750px]:mr-[100px]"
+          className="grid gap-x-12 min-[1750px]:gap-x-24 grid-cols-[repeat(auto-fit,_minmax(300px, 250px))] min-[600px]:grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] min-[800px]:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] min-[1200px]:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] min-[1750px]:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] min-[2200px]:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] min-[1750px]:mr-[100px]"
         >
           {shoes
-            .map((s) => <ShoeCard key={s.id} name={s.name} price={s.price} description={s.description} image={s.image} benefits={s.benefits} characteristics={s.characteristics} />)
+            .map((s) => (
+              <ShoeCard
+                key={s.id}
+                name={s.name}
+                price={s.price}
+                originalPrice={s?.originalPrice}
+                description={s.description}
+                image={s.image}
+                benefits={s.benefits}
+                characteristics={s.characteristics}
+                category={category}
+              />
+            ))
             .slice(0, quantity)}
         </div>
 

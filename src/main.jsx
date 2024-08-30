@@ -1,43 +1,48 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './views/App.jsx'
-import './index.css'
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
-import { ShoesGrid } from './views/ShoesGrid.jsx'
-import { ShoeDetail } from './views/ShoeDetail.jsx'
-import { Bag } from './views/Bag.jsx'
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./views/App.jsx";
+import "./index.css";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
+import { ShoesGrid } from "./views/ShoesGrid.jsx";
+import { ShoeDetail } from "./views/ShoeDetail.jsx";
+import { Bag } from "./views/Bag.jsx";
+import { BagProvider } from "./context/useBag.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Navigate to="/featured" replace />,
   },
   {
-    path: '/featured',
-    element: <App />
+    path: "/featured",
+    element: <App />,
   },
   {
-    path: ':category',
-    element: <ShoesGrid />
+    path: ":category",
+    element: <ShoesGrid />,
   },
   {
-    path: ':category/:shoe',
-    element: <ShoeDetail />
+    path: ":category/:shoe",
+    element: <ShoeDetail />,
   },
   {
-    path: '/bag',
-    element: <Bag />
+    path: "/bag",
+    element: <Bag />,
   },
   {
-    path: '*',
-    element: <p className=''>Error 404</p>
+    path: "*",
+    element: <p className="">Error 404</p>,
   },
-])
+]);
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+    <BagProvider>
+      <RouterProvider router={router} />
+    </BagProvider>
+  </React.StrictMode>
+);

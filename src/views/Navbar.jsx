@@ -2,9 +2,11 @@
 import { MobileNavbar } from "../components/MobileNavbar";
 import { DesktopNavbar } from "../components/DesktopNavbar";
 import { useEffect, useState } from "react";
+import { useBag } from "../context/useBag";
 
 export const Navbar = ({ theme }) => {
     const [width, setWidth] = useState(window.innerWidth);
+    const { bag } = useBag()
 
     useEffect(() => {
       const handleResize = () => {
@@ -18,5 +20,5 @@ export const Navbar = ({ theme }) => {
       };
     }, []);
 
-    return width > 768 ? <DesktopNavbar theme={theme}/> : <MobileNavbar theme={theme} />
+    return width > 768 ? <DesktopNavbar theme={theme} bag={bag} /> : <MobileNavbar theme={theme} bag={bag} />
 }

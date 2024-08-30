@@ -1,11 +1,11 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { navbar } from "../../constants";
 import { Link } from "react-router-dom";
 
-export const MobileNavbar = ({ theme }) => {
+export const MobileNavbar = ({ theme, bag }) => {
   const [isClicked, setIsClicked] = useState(false);
-
   const { links } = navbar;
 
   useEffect(() => {
@@ -84,6 +84,16 @@ export const MobileNavbar = ({ theme }) => {
           <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
           <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
         </svg>
+        
+        {bag.length > 0 && (
+          <p
+            className={`absolute translate-x-[18px] -translate-y-4 flex justify-center items-center size-[20px] text-[13px]  rounded-full ${
+              theme === "white" ? "text-gray-500 bg-white" : "text-white bg-black"
+            }`}
+          >
+            {bag.length}
+          </p>
+        )}
       </Link>
     </div>
   );
