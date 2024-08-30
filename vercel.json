@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/featured", "destination": "/" },
+    { "source": "/:category", "destination": "/" },
+    { "source": "/:category/:shoe", "destination": "/" },
+    { "source": "/bag", "destination": "/" },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
