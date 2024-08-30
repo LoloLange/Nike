@@ -5,6 +5,7 @@ export const colors = [
     bg_nike: new URL('./src/assets/red/NIKE RED BG.webp', import.meta.url).href,
     bg: new URL('./src/assets/red/RED BG.webp', import.meta.url).href,
     shoe: new URL('./src/assets/red/RED.webp', import.meta.url).href,
+    cartImg: new URL('./src/assets/red/cartImg.png', import.meta.url).href,
   },
   {
     color_text: "BLUE",
@@ -12,6 +13,7 @@ export const colors = [
     bg_nike: new URL('./src/assets/blue/NIKE BLUE BG.webp', import.meta.url).href,
     bg: new URL('./src/assets/blue/BLUE BG.webp', import.meta.url).href,
     shoe: new URL('./src/assets/blue/BLUE.webp', import.meta.url).href,
+    cartImg: new URL('./src/assets/blue/cartImg.png', import.meta.url).href,
   },
   {
     color_text: "GREEN",
@@ -19,6 +21,7 @@ export const colors = [
     bg_nike: new URL('./src/assets/green/NIKE GREEN BG.webp', import.meta.url).href,
     bg: new URL('./src/assets/green/GREEN BG.webp', import.meta.url).href,
     shoe: new URL('./src/assets/green/GREEN.webp', import.meta.url).href,
+    cartImg: new URL('./src/assets/green/cartImg.png', import.meta.url).href,
   },
   {
     color_text: "BROWN",
@@ -26,6 +29,7 @@ export const colors = [
     bg_nike: new URL('./src/assets/brown/NIKE BROWN BG.webp', import.meta.url).href,
     bg: new URL('./src/assets/brown/BROWN BG.webp', import.meta.url).href,
     shoe: new URL('./src/assets/brown/BROWN.webp', import.meta.url).href,
+    cartImg: new URL('./src/assets/brown/cartImg.png', import.meta.url).href,
   }
 ];
 
@@ -42,7 +46,10 @@ export const navbar = {
   svg: new URL('./src/assets/shop.svg', import.meta.url).href
 };
 
-export const sizes = [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 12, 13, 14, 15];
+export const sizeMen = [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15];
+export const sizeWomen = [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12];
+export const sizeKids = ['1Y', '1.5Y', '2Y', '2.5Y', '3Y', '3.5Y', '4Y', '4.5Y', '5Y', '5.5Y', '6Y', '6.5Y', '7Y'];
+export const sizeSale = [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13];
 
 export const jordanDescription = "Step into iconic style with Nike Men's Air Jordan 1 Mid. These sneakers blend heritage design with modern flair. The premium leather upper and Air-Sole unit provide comfort and support. With a timeless silhouette and distinctive colorways, the Air Jordan 1 Mid makes a bold statement on and off the court. Elevate your sneaker game with this fusion of heritage and contemporary style from Nike's legendary Jordan collection.";
 
