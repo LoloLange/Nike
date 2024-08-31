@@ -23,13 +23,13 @@ export const Toast = ({ name, size, price, image, fadeout }) => {
           </div>
         </div>
       ) : (
-        <div className="flex items-center rounded-xl shadow-xl select-none w-[300px] p-5 absolute bottom-5 right-5 border-gray-100 border-2 animate-fade-in-left z-50">
+        <div className="flex items-center rounded-xl shadow-xl select-none w-[250px] min-[400px]:w-[300px] p-5 absolute bottom-5 right-5 border-gray-100 border-2 animate-fade-in-left z-50">
           <p>You have reached the maxium of 19 elements on the bag.</p>
         </div>
       )}
     </Link>
   ) : (
-    <div className="flex items-center rounded-xl shadow-xl select-none w-[300px] p-5 absolute bottom-5 right-5 border-gray-100 border-2 animate-fade-in-left z-50">
+    <div className="flex items-center rounded-xl shadow-xl select-none w-[250px] min-[400px]:w-[300px] p-5 absolute bottom-5 right-5 border-gray-100 border-2 animate-fade-in-left z-50">
       <p>Item could not be added successfully. Please try again.</p>
     </div>
   );

@@ -4,7 +4,7 @@
     "name": "Nike Air Force 1",
     "description": "A classic basketball shoe that has become a fashion staple.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/21d38052-598b-44f6-a857-123c9f72b015/AIR+FORCE+1+%2707.png",
-    "price": "$90",
+    "price": "$90.00",
     "color": "White",
     "characteristics": ["Leather upper", "Air-Sole unit", "Rubber outsole"],
     "benefits": ["Timeless design", "Comfortable", "Versatile style"]
@@ -14,7 +14,7 @@
     "name": "Nike Air Max 1",
     "description": "The first Nike shoe to feature a visible Air-Sole unit.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b3512cdd-d117-45a1-838e-9e3bafa68821/SWDC+W+NIKE+AIR+MAX+1.png",
-    "price": "$110",
+    "price": "$110.00",
     "color": "Red",
     "characteristics": [
       "Suede and mesh upper",
@@ -28,7 +28,7 @@
     "name": "Nike Dunk Low",
     "description": "A low-top version of the classic Nike Dunk basketball shoe.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4eae23a9-b240-4a53-98c7-d5502fe3f7dc/NIKE+DUNK+LOW+NN.png",
-    "price": "$100",
+    "price": "$100.00",
     "color": "Blue",
     "characteristics": [
       "Leather and suede upper",
@@ -42,7 +42,7 @@
     "name": "Nike Air Jordan 1",
     "description": "The first signature shoe of Michael Jordan, a basketball legend.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/bf38eaff-28e0-4455-bcf6-af09adcd049b/WMNS+AIR+JORDAN+1+RETRO+LOW+OG.png",
-    "price": "$150",
+    "price": "$150.00",
     "color": "Black",
     "characteristics": ["Leather upper", "Air-Sole unit", "Rubber outsole"],
     "benefits": [
@@ -56,7 +56,7 @@
     "name": "Nike Roshe Run",
     "description": "A minimalist running shoe that emphasizes comfort and simplicity.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ansiaz8yi38xxphzxeyh/W+NIKE+ROSHE+ONE.png",
-    "price": "$75",
+    "price": "$75.00",
     "color": "Gray",
     "characteristics": ["Mesh upper", "Phylon midsole", "Rubber outsole"],
     "benefits": ["Lightweight", "Breathable", "Stylish design"]
@@ -66,7 +66,7 @@
     "name": "Nike Air Max 90",
     "description": "A classic running shoe that features a visible Air-Sole unit in the heel.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3f95f20e-8614-448e-ae34-749facdf5da7/NIKE+AIR+MAX+90+LTR+%28GS%29.png",
-    "price": "$120",
+    "price": "$120.00",
     "color": "Black",
     "characteristics": [
       "Leather and mesh upper",
@@ -80,7 +80,7 @@
     "name": "Nike Free Run",
     "description": "A lightweight running shoe that mimics the feeling of running barefoot.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/m5g458pdbmvl0rubcsj0/NIKE+FREE+RN+2018.png",
-    "price": "$100",
+    "price": "$100.00",
     "color": "Pink",
     "characteristics": ["Mesh upper", "Phylon midsole", "Rubber outsole"],
     "benefits": ["Natural feel", "Flexible", "Great for training"]
@@ -90,7 +90,7 @@
     "name": "Nike Air Presto",
     "description": "A unique running shoe that features a stretchy upper and a snug fit.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/acca3373-8434-4182-ba2a-21f9dafde24b/NIKE+AIR+PRESTO.png",
-    "price": "$130",
+    "price": "$130.00",
     "color": "Black",
     "characteristics": ["Mesh upper", "Phylon midsole", "Rubber outsole"],
     "benefits": ["Comfortable fit", "Lightweight", "Stylish design"]
@@ -100,7 +100,7 @@
     "name": "Nike Blazer Mid",
     "description": "A vintage basketball shoe that has become a fashion icon.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9106922c-a532-482d-a4d8-700a3f91df44/NIKE+BLAZER+MID+%2777+%28GS%29.png",
-    "price": "$85",
+    "price": "$85.00",
     "color": "White",
     "characteristics": [
       "Suede and leather upper",
@@ -114,7 +114,7 @@
     "name": "Nike Air Huarache",
     "description": "A unique running shoe that features a distinctive design and a snug fit.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/18919e9a-c43d-4f41-b669-e3f675488be4/NIKE+AIR+HUARACHE+RUNNER.png",
-    "price": "$110",
+    "price": "$110.00",
     "color": "Black",
     "characteristics": [
       "Neoprene and leather upper",
@@ -128,7 +128,7 @@
     "name": "Nike Cortez",
     "description": "A classic running shoe that has become a cultural icon.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3d34b19a-00d0-4dd2-83d1-0ec839d92a2e/NIKE+CORTEZ.png",
-    "price": "$80",
+    "price": "$80.00",
     "color": "White",
     "characteristics": ["Leather upper", "Rubber outsole", "Padded collar"],
     "benefits": ["Timeless design", "Comfortable fit", "Good traction"]
@@ -138,7 +138,7 @@
     "name": "Nike Air Max 97",
     "description": "A classic running shoe that features a unique design and a visible Air-Sole unit.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/af062188-79e9-48f3-bd85-9cf1f1769fc4/WMNS+AIR+MAX+97.png",
-    "price": "$160",
+    "price": "$160.00",
     "color": "Silver",
     "characteristics": [
       "Leather and mesh upper",
@@ -152,7 +152,7 @@
     "name": "Nike SB Dunk Low",
     "description": "A low-top version of the Nike Dunk, designed for skateboarding.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b9c52ab5-ed2b-41e2-ba82-c395efcbd1e6/NIKE+DUNK+LOW+NN.png",
-    "price": "$110",
+    "price": "$110.00",
     "color": "Black",
     "characteristics": [
       "Leather and suede upper",
@@ -166,7 +166,7 @@
     "name": "Nike Air Zoom Pegasus",
     "description": "A versatile running shoe that is suitable for all types of runners.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8fb34fe2-cc91-4865-9fa6-79b3b26b8ac7/AIR+ZOOM+PEGASUS+41.png",
-    "price": "$120",
+    "price": "$120.00",
     "color": "Blue",
     "characteristics": ["Mesh upper", "Zoom Air unit", "Rubber outsole"],
     "benefits": ["Comfortable cushioning", "Good support", "Great for running"]
@@ -176,7 +176,7 @@
     "name": "Nike React Infinity Run",
     "description": "A running shoe that features Nike's React foam for a soft and responsive ride.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/94312a61-3768-4b41-aa37-bca65b8b6589/NIKE+REACTX+INFINITY+RUN+4.png",
-    "price": "$160",
+    "price": "$160.00",
     "color": "Black",
     "characteristics": ["Mesh upper", "React foam midsole", "Rubber outsole"],
     "benefits": [
@@ -190,7 +190,7 @@
     "name": "Nike Air Max 270",
     "description": "A lifestyle shoe that features a large Air-Sole unit in the heel for maximum cushioning.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cf25a8ba-f3e4-4e33-b664-01b1c5439f96/AIR+MAX+270+BG.png",
-    "price": "$150",
+    "price": "$150.00",
     "color": "Pink",
     "characteristics": ["Mesh upper", "Air unit", "Rubber outsole"],
     "benefits": [
@@ -204,7 +204,7 @@
     "name": "Nike ZoomX Vaporfly",
     "description": "A high-performance racing shoe that is designed for speed.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9fe70154-e4bb-4bcc-9cf0-2efda240916c/NIKE+ZOOMX+VAPORFLY+NEXT%25+3.png",
-    "price": "$250",
+    "price": "$250.00",
     "color": "Black",
     "characteristics": [
       "Mesh upper",
@@ -218,7 +218,7 @@
     "name": "Nike Air Monarch IV",
     "description": "A classic cross-training shoe that is known for its comfort and support.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/zdrgp3gfr1cauqgzlfya/AIR+MONARCH+IV.png",
-    "price": "$100",
+    "price": "$100.00",
     "color": "White",
     "characteristics": ["Leather upper", "Air-Sole unit", "Rubber outsole"],
     "benefits": ["Comfortable fit", "Good support", "Great for training"]
@@ -228,7 +228,7 @@
     "name": "Nike Air Max 1 Premium",
     "description": "A premium version of the classic Air Max 1, featuring high-quality materials.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e9feaa2f-c86c-4358-8fd7-9533e5e91e0f/NIKE+AIR+MAX+1+PRM.png",
-    "price": "$130",
+    "price": "$130.00",
     "color": "Red",
     "characteristics": [
       "Suede and leather upper",
@@ -242,7 +242,7 @@
     "name": "Nike React Element 55",
     "description": "A stylish and comfortable lifestyle shoe that features Nike's React foam.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ca3ffeb0-2333-4603-b3a8-cbfe36670201/NIKE+REACT+PHANTOM+RUN+FK+2.png",
-    "price": "$130",
+    "price": "$130.00",
     "color": "Gray",
     "characteristics": ["Mesh upper", "React foam midsole", "Rubber outsole"],
     "benefits": [
@@ -256,7 +256,7 @@
     "name": "Nike Air Zoom Structure",
     "description": "A stability running shoe that is designed for overpronators.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/42000a66-66f9-4bc7-915c-aa45e351b900/NIKE+AIR+ZOOM+STRUCTURE+25.png",
-    "price": "$130",
+    "price": "$130.00",
     "color": "Blue",
     "characteristics": ["Mesh upper", "Zoom Air unit", "Rubber outsole"],
     "benefits": ["Good support", "Comfortable cushioning", "Great for running"]
@@ -266,7 +266,7 @@
     "name": "Nike Air Max 2090",
     "description": "A futuristic take on the classic Air Max 90, featuring a unique design and updated technology.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4df638b5-36d5-424d-b5b9-fca93c5ff665/W+NIKE+AIR+MAX+INTRLK.png",
-    "price": "$150",
+    "price": "$150.00",
     "color": "Black",
     "characteristics": ["Mesh upper", "Visible Air unit", "Rubber outsole"],
     "benefits": ["Iconic design", "Comfortable cushioning", "Great for running"]
@@ -276,7 +276,7 @@
     "name": "Nike SB Zoom Janoski",
     "description": "A skateboarding shoe that is known for its minimalist design and great performance.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/29a881b7-30e8-414c-8064-a6450ace2ef4/NIKE+SB+ZOOM+JANOSKI+OG%2B.png",
-    "price": "$100",
+    "price": "$100.00",
     "color": "Black",
     "characteristics": ["Suede upper", "Zoom Air unit", "Rubber outsole"],
     "benefits": ["Stylish design", "Comfortable fit", "Great for skateboarding"]
@@ -286,7 +286,7 @@
     "name": "Nike Air Max 1 Ultra",
     "description": "A lightweight version of the classic Air Max 1, featuring a slimmed-down design and updated technology.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2db439f8-b4e2-4b17-80bd-a611558d572a/W+NIKE+AIR+MAX+1+%2787+LX+NBHD.png",
-    "price": "$120",
+    "price": "$120.00",
     "color": "Red",
     "characteristics": [
       "Mesh and synthetic upper",
@@ -300,7 +300,7 @@
     "name": "Nike Air Force 1 Sage",
     "description": "A women's version of the classic Air Force 1, featuring a platform sole for added height.",
     "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/aabae50f-29be-48fd-af87-1fdbff1b4a45/AIR+FORCE+1+%2707+LV8.png",
-    "price": "$110",
+    "price": "$110.00",
     "color": "White",
     "characteristics": ["Leather upper", "Air-Sole unit", "Rubber outsole"],
     "benefits": ["Timeless design", "Comfortable fit", "Stylish platform sole"]

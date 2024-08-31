@@ -18,7 +18,7 @@ export const ShoeCard = ({ id, name, description, image, price, color, character
             <img className="rounded-xl shadow-lg select-none cursor-pointer w-auto" src={imageExist() ? image : defaultImage} alt={name} />
             <p className="font-bold mt-5 min-[1300px]:mt-8 min-[2200px]:mt-10 text-3xl min-[600px]:text-2xl min-[1300px]:text-3xl min-[1750px]:text-3xl min-[2200px]:text-4xl pb-1">{name}</p>
             <span className="text-2xl min-[600px]:text-xl min-[1300px]:text-2xl min-[1750px]:mt-2 min-[1750px]:text-2xl min-[2200px]:text-3xl flex"><p className="pr-2">{price}</p> <p className="text-gray-400 opacity-75 line-through text-lg flex items-center">{originalPrice}</p></span>
-            <p className="text-green-600 font-semibold mt-1">{originalPrice && ((parseFloat(originalPrice.slice(1) - price.slice(1)) / parseFloat(originalPrice.slice(1))) * 100).toFixed(2) + '% Discount'}</p>
+            <p className="text-green-600 font-semibold mt-1">{originalPrice && ((parseFloat(originalPrice.slice(1) - price.slice(1)) / parseFloat(originalPrice.slice(1))) * 100).toFixed(0) + '% Discount'}</p>
             </Link>
         </div>
     )

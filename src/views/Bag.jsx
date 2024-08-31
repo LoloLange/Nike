@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { Navbar } from "./Navbar";
 import { sizeMen, sizeWomen, sizeKids, sizeSale } from "../../constants";
@@ -5,7 +6,20 @@ import { useBag } from "../context/useBag";
 
 export const Bag = () => {
   const [subtotal, setSubtotal] = useState();
-  const {bag, setBag} = useBag();
+  const { bag, setBag } = useBag();
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleSizeChange = (index, newSize) => {
     const updatedBag = [...bag];
@@ -43,68 +57,73 @@ export const Bag = () => {
     setSubtotal(newSubtotal.toFixed(2));
   }, [bag]);
 
-  const taxes = (subtotal * 0.21).toFixed(2);
+  const taxes = (subtotal * 0.09).toFixed(2);
 
   return (
     <div>
       <Navbar />
-      <div className="mb-[50px] mt-5 mx-[50px] min-[1300px]:mx-[75px] text-black max-[768px]:pt-5">
-        <p className="font-poppins text-5xl font-bold">Cart</p>
+      <div className="mb-[20px] min-[768px]:mb-[40px] mt-5 mx-[50px] min-[1300px]:mx-[75px] text-black max-[768px]:pt-5">
+        <p className="font-poppins text-5xl font-bold">Bag</p>
         <hr className="border-[#bbb] mt-5" />
       </div>
 
-      <div className="flex justify-around min-[850px]:justify-between min-[800px]:pr-[75px] text-2xl min-[1300px]:pr-[150px] min-[700px]:pl-5 flex-wrap">
+      <div className="flex justify-around min-[700px]:px-[100px] text-2xl min-[1300px]:px-[150px] min-[700px]:px-5 flex-wrap font-poppins mt-5 flex-wrap gap-x-2 min-[800px]:gap-y-5">
         <div>
           {bag.length > 0 ? (
             bag.map((b, index) => (
               <div
                 key={index}
-                className="flex justify-between pb-8 items-center"
+                className="flex justify-between items-center px-5"
               >
-                <div className="flex ml-2 min-[700px]:ml-8 min-[1100px]:ml-16 max-[800px]:px-10">
+                <div className="flex items-center ml-2 min-[700px]:ml-8 my-5">
                   <img
-                    className="size-[170px] min-[450px]:size-[200px] object-cover rounded-xl select-none"
+                    className="size-[150px] min-[340px]:size-[170px] min-[450px]:size-[200px] object-cover rounded-xl select-none"
                     src={b.image}
                     alt={b.name}
                   />
-                  <div className="flex flex-col px-5 text-base min-[500px]:text-lg min-[768px]:text-xl pt-2">
-                    <p>{b.name}</p>
-                    <p>{b.category.slice(0, 1).toUpperCase() + b.category.slice(1)}</p>
-                    <p>{b.price}</p>
+                  <div className="flex flex-col px-3.5 min-[450px]:px-5 text-xl min-[768px]:text-2xl">
+                    <p className="font-bold">{b.name}</p>
+                    <p className="text-gray-400 brightness-80 text-sm -mt-1 mb-1">
+                      {b.category.slice(0, 1).toUpperCase() +
+                        b.category.slice(1)}{" "}
+                      shoes
+                    </p>
+                    {width >= 1100 && (
+                      <p className="text-sm max-w-[300px] min-[1200px]:max-w-[400px] mb-1">
+                        {b.description}
+                      </p>
+                    )}
 
-                    <label htmlFor={`size-${index}`} className="pt-2">
-                      Size:
-                    </label>
-                    <select
-                      id={`size-${index}`}
-                      value={b.size || ""}
-                      onChange={(e) => handleSizeChange(index, e.target.value)}
-                      className="p-1 border rounded outline-none border-gray-200 w-[70px] min-[1300px]:w-[100px]"
-                    >
-                      {sizes[b.category].map((size, i) => (
-                        <option key={i} value={size}>
-                          {size}
-                        </option>
-                      ))}
-                    </select>
+                    <p className="text-sm min-[768px]:text-base mb-2">
+                      Size: {b.size}
+                    </p>
 
-                    <div className="flex items-center mr-5 min-[1100px]:mr-10">
+                    <span className="flex flex-wrap gap-x-2 mb-0.5 min-[450px]:mb-2">
+                      <p className="font-semibold">
+                        ${parseFloat(b.price.slice(1)).toFixed(2)}
+                      </p>
+                      {b.originalPrice && (
+                        <p className="text-gray-400 opacity-75 line-through text-base min-[768px]:text-lg flex items-center">
+                          {b.originalPrice}
+                        </p>
+                      )}
+                    </span>
+
+                    <div className="flex items-center mr-5 min-[1100px]:mr-10 bg-[#ee6b6e] size-[30px] mt-1 rounded-full justify-center cursor-pointer shadow-md">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="none"
-                        stroke="#ee6b6e"
+                        stroke="#eee"
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag-x size-[33px] mt-3 cursor-pointer"
                         onClick={() => handleRemoveItem(index)}
+                        className="icon icon-tabler icons-tabler-outline icon-tabler-x size-[20px] -translate-x-[.5px]"
                       >
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M13 21h-4.426a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304h11.339a2 2 0 0 1 1.977 2.304l-.506 3.287" />
-                        <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
-                        <path d="M22 22l-5 -5" />
-                        <path d="M17 22l5 -5" />
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
                       </svg>
                     </div>
 
@@ -128,27 +147,36 @@ export const Bag = () => {
               </div>
             ))
           ) : (
-            <p className="text-center text-xl pl-14 max-[800px]:pb-8 max-[570px]:px-14 max-[800px]:px-[200px]">The bag is empty.</p>
+            <p className="text-center text-xl pl-14 max-[800px]:pb-8 max-[570px]:px-14 max-[800px]:px-[200px] w-[300px] min-[1200px]:w-[400px]">
+              The bag is empty.
+            </p>
           )}
         </div>
 
         <div className="w-[270px] min-[400px]:w-[320px] min-[1000px]:w-[400px] min-[1300px]:w-[500px] max-[800px]:pt-5">
-          <div className="flex justify-between items-center text-xl min-[1000px]:text-2xl min-[1300px]:text-3xl border-gray-100 pb-1 border-b-2 mb-5">
+          <p className="font-bold text-3xl min-[600px]:text-4xl mb-3 text-center">
+            Order Summary
+          </p>
+          <hr />
+          <br />
+          <div className="flex justify-between items-center text-lg min-[1000px]:text-xl min-[1300px]:text-2xl border-gray-100 pb-1 border-b-2 mb-5">
             <p>Subtotal</p>
             <p>${subtotal}</p>
           </div>
-          <div className="flex justify-between items-center text-lg min-[1000px]:text-xl min-[1300px]:text-2xl border-gray-100 pb-1 border-b-2 mb-5 min-[1300px]:mb-10">
+          <div className="flex justify-between items-center text-base min-[1000px]:text-lg min-[1300px]:text-xl border-gray-100 pb-1 border-b-2 mb-5 min-[1300px]:mb-10">
             <p>Taxes</p>
             <p>${taxes}</p>
           </div>
-          <div className="flex justify-between items-center text-xl min-[1000px]:text-2xl min-[1300px]:text-3xl border-gray-100 pb-1 border-b-2 font-bold">
+          <div className="flex justify-between items-center text-lg min-[1000px]:text-xl min-[1300px]:text-2xl border-gray-100 pb-1 border-b-2 font-bold">
             <p>Total</p>
             <p>${(parseFloat(subtotal) + parseFloat(taxes)).toFixed(2)}</p>
           </div>
 
           <div
             onClick={handleCheckout}
-            className={`${bag.length > 0 ? 'cursor-pointer ' : 'text-gray-300'} text-lg min-[1000px]:text-xl min-[1300px]:text-2xl bg-black text-white rounded-full text-center p-2.5 min-[1000px]:p-3 mt-7 min-[1000px]:mt-10 max-[800px]:mb-5`}
+            className={`${
+              bag.length > 0 ? "cursor-pointer " : "text-gray-300"
+            } text-lg min-[1000px]:text-xl min-[1300px]:text-2xl bg-black text-white rounded-2xl text-center p-2.5 min-[1000px]:p-3 mt-7 min-[1000px]:mt-10 mb-5`}
           >
             <button disabled={bag.length > 0 ? false : true}>Checkout</button>
           </div>

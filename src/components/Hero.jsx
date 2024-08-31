@@ -41,11 +41,12 @@ export const Hero = ({ activeColor, setActiveColor, bag, setBag }) => {
       const updatedBag = [
         ...bag,
         {
-          name: "JORDAN 1 MID " + colors[activeColor[2]].color_text,
+          name: "Jordan 1 Mid " + colors[activeColor[2]].color_text.slice(0, 1).toUpperCase() + colors[activeColor[2]].color_text.slice(1).toLowerCase(),
           image: colors[activeColor[2]].cartImg,
           price: "$125",
           size: size,
           category: 'men',
+          description: "Elevate your sneaker game with this fusion of heritage and contemporary style from Nike's legendary Jordan collection."
         },
       ];
 
@@ -132,7 +133,7 @@ export const Hero = ({ activeColor, setActiveColor, bag, setBag }) => {
                 {colorsHex.map((c) => (
                   <span
                     key={c.hex}
-                    className={`rounded-full border-2 cursor-pointer p-5 ${
+                    className={`rounded-full border-2 cursor-pointer p-5 ${toast && 'pointer-events-none'} ${
                       activeColor[0] === c.hex
                         ? "border-gray-100 shadow-xl scale-105 min-[2000px]:scale-[1.3] min-[2200px]:scale-[1.4] transition-all duration-300"
                         : "border-gray-400 scale-90 min-[2000px]:scale-110 min-[2200px]:scale-[1.2]"
@@ -156,7 +157,7 @@ export const Hero = ({ activeColor, setActiveColor, bag, setBag }) => {
         </section>
         {toast && (
           <Toast
-            name={"JORDAN 1 MID " + colors[activeColor[2]].color_text}
+            name={"Jordan 1 Mid " + colors[activeColor[2]].color_text.slice(0, 1).toUpperCase() + colors[activeColor[2]].color_text.slice(1).toLowerCase()}
             size={size}
             price={"$125"}
             image={colors[activeColor[2]].cartImg}

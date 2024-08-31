@@ -39,7 +39,7 @@ export const ShoeDetail = () => {
     if (size !== null) {
       setToast(true);
       // set bag
-      const newBag = [...bag, { name, image, price, size, category }];
+      const newBag = [...bag, { name, image, price, size, category, description, originalPrice }];
 
       if (newBag.length < 19) {
         setBag(newBag);
@@ -72,12 +72,12 @@ export const ShoeDetail = () => {
             {description}
           </p>
           <span className="text-2xl min-[1750px]:text-3xl min-[2000px]:text-4xl flex">
-            <p className="pr-2">{price}</p>{" "}
+            <p className="pr-2 font-semibold">{price}</p>{" "}
             <p className="text-gray-400 opacity-75 line-through text-xl flex items-center">
               {originalPrice}
             </p>
           </span>
-          <p className="text-green-600 font-semibold mt-1">{originalPrice && ((parseFloat(originalPrice.slice(1) - price.slice(1)) / parseFloat(originalPrice.slice(1))) * 100).toFixed(2) + '% Discount'}</p>
+          <p className="text-green-600 font-semibold mt-1">{originalPrice && ((parseFloat(originalPrice.slice(1) - price.slice(1)) / parseFloat(originalPrice.slice(1))) * 100).toFixed(0) + '% Discount'}</p>
           <div className="text-lg min-[1750px]:text-2xl min-[2000px]:text-3xl font-medium pt-8">
             <p>Pick your size</p>
             {/* <a href="https://www.nike.com/size-fit/mens-footwear" target="_blank" className="opacity-50">Size Guide</a> */}
