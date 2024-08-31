@@ -6,6 +6,7 @@ import { sizeMen, sizeWomen, sizeKids, sizeSale } from "../../constants";
 import { useState } from "react";
 import { Toast } from "../components/Toast";
 import { useBag } from "../context/useBag";
+import { useLiked } from "../context/useLiked";
 
 export const ShoeDetail = () => {
   const [size, setSize] = useState(null);
@@ -13,6 +14,9 @@ export const ShoeDetail = () => {
   const [toast, setToast] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
   const { bag, setBag } = useBag();
+  const { likedClick, checkIfLiked } = useLiked();
+  const { pathname } = useLocation();
+
   const location = useLocation();
   const { name, price, image, description, category, originalPrice } =
     location.state || [];
@@ -56,14 +60,48 @@ export const ShoeDetail = () => {
     } else setSizeMessage(true);
   };
 
+  const isLiked = checkIfLiked(
+    name,
+    image,
+    price,
+    category,
+    description,
+    originalPrice
+  );
+
   return (
     <>
       <Navbar bag={bag} />
       <div className="flex justify-center max-[1300px]:items-center font-poppins pt-12 min-[1200px]:mx-[200px] min-[1300px]:mx-0 flex-wrap">
+        <div className="flex justify-end">
         <img
           src={image}
           className="w-screen h-[350px] min-[500px]:h-[450px] min-[768px]:w-[550px] min-[768px]:h-[400px] min-[900px]:w-[700px] min-[900px]:h-[500px] min-[1300px]:h-auto min-[1300px]:w-[600px] min-[2000px]:w-[750px] rounded-lg object-cover min-[1300px]:object-contain"
         />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill={isLiked ? "#000" : "none"}
+          stroke="#121212"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          onClick={() =>
+            likedClick(
+              name,
+              image,
+              price,
+              category,
+              description,
+              originalPrice
+            )
+          }
+          className="icon icon-tabler icons-tabler-outline icon-tabler-heart w-16 -translate-y-1.5 cursor-pointer mt-8 mr-7 p-1.5 select-none rounded-full bg-[#ddd] absolute"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+        </svg>
+        </div>
         <div className="min-[1300px]:pl-12 max-[768px]:w-screen w-[500px] max-[768px]:mx-10 min-[1300px]:w-[600px] min-[2000px]:w-[750px] max-[1300px]:pt-10">
           <p className="text-4xl min-[1750px]:text-5xl min-[2000px]:text-7xl font-bold">
             {name}
@@ -80,7 +118,6 @@ export const ShoeDetail = () => {
           <p className="text-green-600 font-semibold mt-1">{originalPrice && ((parseFloat(originalPrice.slice(1) - price.slice(1)) / parseFloat(originalPrice.slice(1))) * 100).toFixed(0) + '% Discount'}</p>
           <div className="text-lg min-[1750px]:text-2xl min-[2000px]:text-3xl font-medium pt-8">
             <p>Pick your size</p>
-            {/* <a href="https://www.nike.com/size-fit/mens-footwear" target="_blank" className="opacity-50">Size Guide</a> */}
             <div
               className={`flex flex-wrap min-[1750px]:mt-3 ${
                 toast ? "select-none pointer-events-none" : ""
@@ -113,13 +150,6 @@ export const ShoeDetail = () => {
           >
             Add to Bag
           </button>
-
-          {/* <div className="mt-5 text-lg">
-            <p>Benefits:</p>
-            <ul className="list-disc">{benefits.map((s) => <li key={s}>{s}</li>)}</ul>
-            <p className="mt-2">Characteristics:</p>
-            <ul className="list-disc">{characteristics.map((s) => <li key={s}>{s}</li>)}</ul>
-          </div> */}
         </div>
       </div>
       {toast && (

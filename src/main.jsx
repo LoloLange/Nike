@@ -11,6 +11,8 @@ import { ShoesGrid } from "./views/ShoesGrid.jsx";
 import { ShoeDetail } from "./views/ShoeDetail.jsx";
 import { Bag } from "./views/Bag.jsx";
 import { BagProvider } from "./context/useBag.jsx";
+import { LikedProvider } from "./context/useLiked.jsx";
+import { Liked } from "./views/Liked.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
     element: <Bag />,
   },
   {
+    path: '/liked',
+    element: <Liked />
+  },
+  {
     path: "*",
     element: <p className="">Error 404</p>,
   },
@@ -42,7 +48,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BagProvider>
-      <RouterProvider router={router} />
+      <LikedProvider>
+        <RouterProvider router={router} />
+      </LikedProvider>
     </BagProvider>
   </React.StrictMode>
 );

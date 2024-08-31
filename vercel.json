@@ -4,6 +4,7 @@
     { "source": "/:category", "destination": "/" },
     { "source": "/:category/:shoe", "destination": "/" },
     { "source": "/bag", "destination": "/" },
+    { "source": "/liked", "destination": "/" },
     { "source": "/(.*)", "destination": "/" }
   ]
 }

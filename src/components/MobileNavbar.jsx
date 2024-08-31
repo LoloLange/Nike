@@ -31,17 +31,29 @@ export const MobileNavbar = ({ theme, bag }) => {
           >
             <span
               className={`line ${
-                isClicked ? ("bg-[#FFF]") : (theme === "white" ? "bg-[#FFF]" : "bg-[#000]")
+                isClicked
+                  ? "bg-[#FFF]"
+                  : theme === "white"
+                  ? "bg-[#FFF]"
+                  : "bg-[#000]"
               }`}
             ></span>
             <span
               className={`line ${
-                isClicked ? ("bg-[#FFF]") : (theme === "white" ? "bg-[#FFF]" : "bg-[#000]")
+                isClicked
+                  ? "bg-[#FFF]"
+                  : theme === "white"
+                  ? "bg-[#FFF]"
+                  : "bg-[#000]"
               }`}
             ></span>
             <span
               className={`line ${
-                isClicked ? ("bg-[#FFF]") : (theme === "white" ? "bg-[#FFF]" : "bg-[#000]")
+                isClicked
+                  ? "bg-[#FFF]"
+                  : theme === "white"
+                  ? "bg-[#FFF]"
+                  : "bg-[#000]"
               }`}
             ></span>
           </div>
@@ -69,7 +81,8 @@ export const MobileNavbar = ({ theme, bag }) => {
         </div>
       )}
 
-      <Link to={'/bag'}>
+      <div className="flex">
+      <Link to={"/liked"}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -78,23 +91,42 @@ export const MobileNavbar = ({ theme, bag }) => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag w-9 cursor-pointer select-none"
+          className="icon icon-tabler icons-tabler-outline icon-tabler-heart w-9 cursor-pointer select-none mr-3"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
-          <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+          <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
         </svg>
-        
-        {bag.length > 0 && (
-          <p
-            className={`absolute translate-x-[18px] -translate-y-4 flex justify-center items-center size-[20px] text-[13px]  rounded-full ${
-              theme === "white" ? "text-gray-500 bg-white" : "text-white bg-black"
-            }`}
+        </Link>
+
+        <Link to={"/bag"}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke={theme === "white" ? "#FFF" : "#000"}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag w-9 cursor-pointer select-none"
           >
-            {bag.length}
-          </p>
-        )}
-      </Link>
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
+            <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+          </svg>
+
+          {bag.length > 0 && (
+            <p
+              className={`absolute translate-x-[18px] -translate-y-4 flex justify-center items-center size-[20px] text-[13px]  rounded-full ${
+                theme === "white"
+                  ? "text-gray-500 bg-white"
+                  : "text-white bg-black"
+              }`}
+            >
+              {bag.length}
+            </p>
+          )}
+        </Link>
+      </div>
     </div>
   );
 };
